@@ -1,0 +1,230 @@
+.iot-integration {
+  padding: 20px;
+  background-color: #f5f7fa;
+  min-height: calc(100vh - 180px);
+}
+
+.iot-integration h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.connection-panel {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.connection-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.connection-info h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.status-indicator {
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.connection-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.connection-controls input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  min-width: 250px;
+}
+
+.connection-controls button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+.connection-controls button:first-child {
+  background-color: #3498db;
+}
+
+.connection-controls button:last-child {
+  background-color: #e74c3c;
+}
+
+.connection-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.iot-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 20px;
+}
+
+.device-list h3 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.device-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.device-card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.device-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.device-card.selected {
+  border-color: #3498db;
+  background-color: #f8f9fa;
+}
+
+.device-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.device-header h4 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.device-status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.device-details p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.device-details strong {
+  color: #2c3e50;
+}
+
+.sensor-data {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #eee;
+}
+
+.device-detail-panel {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  height: fit-content;
+  align-self: start;
+}
+
+.device-detail-panel h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.device-detail-content h4 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.device-detail-content p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.device-actions {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.action-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.action-btn.refresh {
+  background-color: #3498db;
+}
+
+.action-btn.configure {
+  background-color: #9b59b6;
+}
+
+.action-btn.calibrate {
+  background-color: #f39c12;
+}
+
+.action-btn:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+  .iot-dashboard {
+    grid-template-columns: 1fr;
+  }
+  
+  .connection-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .connection-info {
+    justify-content: space-between;
+  }
+}
